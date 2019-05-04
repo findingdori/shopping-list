@@ -26,3 +26,10 @@ $('#js-shopping-list-form').on('submit', function(event) {
   //clear text field for next entry
   $('#shopping-list-entry').val('');
 })
+
+//Checks off list item when pressing check button
+$('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
+  $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+
+  //console.log($(this.closest('li')));
+});
